@@ -1,0 +1,68 @@
+@use '../variables/variable.scss' as *;
+.cart-float-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 0.5rem;
+
+  z-index: 99;
+
+  .cart-float-thumbnail {
+    width: 10%;
+  }
+
+  .delete-btn {
+    background-color: transparent;
+    padding: 0.5rem;
+    border: none;
+
+    cursor: pointer;
+  }
+
+  .cart-float-description {
+    display: flex;
+    flex-direction: column;
+    .cart-float-type {
+      font-weight: $fontWeight-700;
+      color: $neutralColor_Black;
+    }
+    .cart-float-prices {
+      display: flex;
+      gap: 0.5rem;
+
+      .float-prices {
+        color: $neutralColor_Black;
+      }
+
+      .float-quantity {
+        color: $neutralColor_Black;
+      }
+
+      .float-total {
+        font-weight: $fontWeight-700;
+      }
+    }
+  }
+}
+
+.checkout-btn {
+  background-color: $primaryColor_Orange;
+  padding: 0.3rem;
+
+  border: none;
+  border-radius: 30px;
+
+  .checkout-btn-text {
+    font-weight: $fontWeight-700;
+    color: $neutralColor_Black;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

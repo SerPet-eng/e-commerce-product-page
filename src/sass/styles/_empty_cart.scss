@@ -1,0 +1,14 @@
+@use '../variables/variable.scss' as *;
+
+.empty-cart {
+  display: grid;
+  min-height: 100%;
+  place-content: center;
+
+  margin-top: 50px;
+
+  .empty-cart-title {
+    font-weight: $fontWeight-700;
+    color: $neutralColor_800;
+  }
+}

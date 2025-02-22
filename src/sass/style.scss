@@ -1,0 +1,18 @@
+@import './reset';
+@import './styles/body';
+@import './styles/nav_bar';
+@import './styles/cart_float';
+@import './styles/empty_cart';
+@import './styles/confirm_cart';
+@import './styles/image_section';
+@import './styles/hero_section';
+
+// NAV STYLE
+@import '../sass/navs/mobile_nav';
+@import '../sass/navs/desktop_nav';
+
+// MEDIA QUERIES
+@import './media_queries/main_queries';
+@import './media_queries/image_section_queries';
+@import './media_queries/hero_section_query';
+@import './media_queries/cart_float_queries';

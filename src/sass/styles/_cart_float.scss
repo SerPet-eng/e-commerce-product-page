@@ -1,0 +1,56 @@
+@use '../variables/variable.scss' as *;
+
+.cart-float {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+
+  padding: 1rem;
+  min-height: 30vh;
+  background-color: $neutralColor_White;
+
+  position: fixed;
+  top: 70px;
+  left: 20px;
+  right: 20px;
+
+  z-index: 99;
+
+  border-radius: 20px;
+  box-shadow: 0 1px 5px $neutralColor_Black;
+
+  .cart-float-title {
+    font-weight: $fontWeight-700;
+    color: $neutralColor_Black;
+  }
+}
+
+.item-show {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  .image-section-item {
+    cursor: pointer;
+  }
+  .image {
+    border-radius: 10px;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.item-hide {
+  display: none;
+}
+
+.active {
+  opacity: 0.5;
+}
+
+.active-image-outline {
+  border-radius: 10px;
+  outline: 2px solid $primaryColor_Orange;
+}

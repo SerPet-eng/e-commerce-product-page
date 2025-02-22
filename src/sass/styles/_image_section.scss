@@ -1,0 +1,38 @@
+.image-section {
+  padding-top: 5rem;
+
+  z-index: 1;
+  .image-section-current {
+    position: relative;
+
+    .image-section-hero {
+      border-radius: 30px;
+    }
+
+    .image-section-prev-btn {
+      position: absolute;
+      top: 40%;
+      left: 5%;
+      transform: translateY(40%);
+
+      padding: 0.5rem 0.7rem;
+      border-radius: 50%;
+      border: none;
+
+      cursor: pointer;
+    }
+
+    .image-section-next-btn {
+      position: absolute;
+      top: 40%;
+      right: 5%;
+      transform: translateY(40%);
+
+      padding: 0.5rem 0.7rem;
+      border-radius: 50%;
+      border: none;
+
+      cursor: pointer;
+    }
+  }
+}
