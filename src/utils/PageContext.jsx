@@ -1,5 +1,13 @@
 import { createContext, useContext, useEffect, useState } from 'react';
-import useFetchData from './useFetchData';
+
+import imageProduct1Thumbnail from '../../images/image-product-1-thumbnail.jpg';
+import imageProduct1 from '../../images/image-product-1.jpg';
+import imageProduct2Thumbnail from '../../images/image-product-2-thumbnail.jpg';
+import imageProduct2 from '../../images/image-product-2.jpg';
+import imageProduct3Thumbnail from '../../images/image-product-3-thumbnail.jpg';
+import imageProduct3 from '../../images/image-product-3.jpg';
+import imageProduct4Thumbnail from '../../images/image-product-4-thumbnail.jpg';
+import imageProduct4 from '../../images/image-product-4.jpg';
 
 const PageContextProvider = createContext();
 
@@ -10,7 +18,33 @@ export function usePageContext() {
 
 // eslint-disable-next-line react/prop-types
 export default function PageContext({ children }) {
-  const { data: items, error } = useFetchData('../../data/data.json');
+  const items = [
+    {
+      images: {
+        thumbnail: imageProduct1Thumbnail,
+        main: imageProduct1,
+      },
+    },
+    {
+      images: {
+        thumbnail: imageProduct2Thumbnail,
+        main: imageProduct2,
+      },
+    },
+    {
+      images: {
+        thumbnail: imageProduct3Thumbnail,
+        main: imageProduct3,
+      },
+    },
+    {
+      images: {
+        thumbnail: imageProduct4Thumbnail,
+        main: imageProduct4,
+      },
+    },
+  ];
+
   const originalPrice = 125;
 
   const [image, setImage] = useState([]);
@@ -103,7 +137,6 @@ export default function PageContext({ children }) {
   const datas = {
     items,
     image,
-    error,
     currentIndex,
     handleClick,
     handleCartDisplay,
